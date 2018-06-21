@@ -12,5 +12,7 @@ public class WebRestController {
     } // HelloWorld 라는 문구 반환
 
     @GetMapping("/welcome")
-    public String welcome(){ return "Welcome to Spring Boot";} // 조금 더 응용해서 다른 문구도 출력가능하게
+    public String welcome(){
+        return "Welcome to Spring Boot";
+    } // 조금 더 응용해서 다른 문구도 출력가능하게
 }
