@@ -18,8 +18,7 @@ import javax.persistence.Id;
 
 // 테이블과 링크될 클래스 + 언더스코어 네이밍으로 이름 매칭 ex ) SalesManager -> sales_manager table
 @Entity
-
-public class Posts {
+class Posts {
     @Id // 해당 테이블의 PK 필드를 나타냄
     @GeneratedValue // PK의 생성 규칙을 나타냄
     private  Long id;
