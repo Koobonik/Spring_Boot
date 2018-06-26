@@ -4,6 +4,7 @@ import com.devkoo.webservice.domain.posts.Posts;
 import com.devkoo.webservice.domain.posts.PostsRepository;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,8 +12,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//@AllArgsConstructor
 public class WebRestController {
     private PostsRepository postsRepository;
+
+    public WebRestController(PostsRepository postsRepository){
+        this.postsRepository = postsRepository;
+    }
 
     @GetMapping("/hello") // 웹에서 /hello 라는 요청이 있을경우
     public String hello() {
@@ -27,9 +33,6 @@ public class WebRestController {
     @PostMapping("/posts")
     public void savePosts(@RequestBody PostsSaveRequestDto dto){
         postsRepository.save(dto.toEntity());
-
     }
-
-
 }
 
