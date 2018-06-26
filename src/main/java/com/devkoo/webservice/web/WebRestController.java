@@ -1,11 +1,6 @@
 package com.devkoo.webservice.web;
 
-import com.devkoo.webservice.domain.posts.Posts;
 import com.devkoo.webservice.domain.posts.PostsRepository;
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
