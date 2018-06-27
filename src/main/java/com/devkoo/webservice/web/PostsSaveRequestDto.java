@@ -1,7 +1,6 @@
 package com.devkoo.webservice.web;
 
 import com.devkoo.webservice.domain.posts.Posts;
-import lombok.Builder;
 import lombok.Setter;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
