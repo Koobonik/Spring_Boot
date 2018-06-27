@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
+        compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.2.15'
     }
 }
 
