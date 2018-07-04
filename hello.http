@@ -5,6 +5,8 @@
 # * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
 # * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
 
+
+### JDBC URL 부분에 꼭 jdbc:h2:mem:testdb 넣어줘야함
 POST http://localhost:8080/posts
 Content-Type: application/json
 
