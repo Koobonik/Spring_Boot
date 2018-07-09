@@ -17,7 +17,7 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 
-public class PostsRepositoryTest  {
+public class PostsRepositoryTest {
 
     @Autowired
     PostsRepository postsRepository;
