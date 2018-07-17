@@ -14,10 +14,10 @@ cache:
 
 script: "./gradlew clean build"
 
-before_deploy:
-  - zip -r springboot *
-  - mkdir -p deploy
-  - mv springboot.zip deploy/springboot.zip
+#before_deploy:
+#  - zip -r springboot *
+#  - mkdir -p deploy
+#  - mv springboot.zip deploy/springboot.zip
 
 deploy:
   - provider: s3
