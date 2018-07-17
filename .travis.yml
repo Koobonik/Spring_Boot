@@ -36,4 +36,4 @@ deploy:
 notifications:
   email:
     recipients:
-      - kbi960130@naver.com
+      - kbi960130@naver.com # 메일로 보내기
