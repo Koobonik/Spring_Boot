@@ -30,7 +30,7 @@ deploy:
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
     on:
-      repo: Koobonik/Spring_Boot
+      repo: koobonik/spring_boot
       branch: master
 
 notifications:
