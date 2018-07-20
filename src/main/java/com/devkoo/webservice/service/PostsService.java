@@ -2,6 +2,7 @@ package com.devkoo.webservice.service;
 
 import com.devkoo.webservice.domain.posts.PostsRepository;
 import com.devkoo.webservice.dto.posts.PostsMainResponseDto;
+import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
