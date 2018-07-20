@@ -2,15 +2,7 @@ package com.devkoo.webservice.service;
 
 import com.devkoo.webservice.domain.posts.Posts;
 import com.devkoo.webservice.domain.posts.PostsRepository;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
-=======
 import com.devkoo.webservice.web.PostsSaveRequestDto;
->>>>>>> parent of 92ad07d... 파일 이동
-=======
-import com.devkoo.webservice.web.PostsSaveRequestDto;
->>>>>>> parent of 92ad07d... 파일 이동
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
