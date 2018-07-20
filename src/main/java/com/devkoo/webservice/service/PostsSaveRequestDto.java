@@ -1,4 +1,4 @@
-package com.devkoo.webservice.web;
+package com.devkoo.webservice.service;
 
 import com.devkoo.webservice.domain.posts.Posts;
 import lombok.Builder;

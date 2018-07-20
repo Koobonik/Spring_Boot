@@ -1,4 +1,4 @@
-package com.devkoo.webservice.service;
+package com.devkoo.webservice.dto.posts;
 
 import com.devkoo.webservice.domain.posts.Posts;
 import lombok.Getter;
