@@ -1,10 +1,6 @@
 package com.devkoo.webservice.web;
 
 import com.devkoo.webservice.domain.posts.PostsRepository;
-<<<<<<< HEAD
-import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
-=======
->>>>>>> parent of 92ad07d... 파일 이동
 import com.devkoo.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
