@@ -28,7 +28,6 @@ public class Posts extends BaseTimeEntity {
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
-
     private String author;
 
     // 해당 클래스의 빌더 패턴 클래스를 생성

@@ -15,7 +15,7 @@ public class WebRestController {
     private PostsService postsService;
     @GetMapping("/hello") // 웹에서 /hello 라는 요청이 있을경우
     public String hello() {
-        return "HelloWorld";
+        return "HelloWorld hello";
     } // HelloWorld 라는 문구 반환
 
     @GetMapping("/welcome")
