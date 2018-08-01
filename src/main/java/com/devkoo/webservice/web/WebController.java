@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @AllArgsConstructor
-public class WebController {
+public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 이곳 저곳 보낼 수 있음 return 값도 잘 이용하자
 
     private PostsService postsService;
 
@@ -16,5 +16,12 @@ public class WebController {
     public String main(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
         return "main";
+    }
+
+    @GetMapping("helloworld")
+    public String helloworld(Model model){
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "helloworld";
+
     }
 }
