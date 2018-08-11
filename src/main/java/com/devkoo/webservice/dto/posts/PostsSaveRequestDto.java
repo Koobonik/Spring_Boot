@@ -1,16 +1,22 @@
-package com.devkoo.webservice.web;
+package com.devkoo.webservice.dto.posts;
 
 import com.devkoo.webservice.domain.posts.Posts;
 import lombok.Builder;
-import lombok.Setter;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+/**
+ * Created by jojoldu@gmail.com on 2017. 12. 27.
+ * Blog : http://jojoldu.tistory.com
+ * Github : https://github.com/jojoldu
+ */
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class PostsSaveRequestDto{
+public class PostsSaveRequestDto {
+
     private String title;
     private String content;
     private String author;

@@ -1,6 +1,7 @@
 package com.devkoo.webservice.web;
 
 import com.devkoo.webservice.domain.posts.PostsRepository;
+import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
 import com.devkoo.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
