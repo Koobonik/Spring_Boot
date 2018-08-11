@@ -2,6 +2,7 @@ package com.devkoo.webservice.service;
 
 import com.devkoo.webservice.domain.posts.Posts;
 import com.devkoo.webservice.domain.posts.PostsRepository;
+import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
