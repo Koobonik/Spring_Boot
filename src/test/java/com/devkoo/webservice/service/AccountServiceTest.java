@@ -1,9 +1,8 @@
 package com.devkoo.webservice.service;
 
 import com.devkoo.webservice.domain.account.Account;
-import com.devkoo.webservice.domain.posts.Posts;
-import com.devkoo.webservice.domain.posts.PostsRepository;
-import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
+import com.devkoo.webservice.domain.account.AccountRepository;
+import com.devkoo.webservice.dto.account.AccountSaveRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,33 +17,31 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountServiceTest {
 
     @Autowired
-    private Account postsService;
+    private AccountService accountservice;
 
     @Autowired
-    private PostsRepository postsRepository;
+    private AccountRepository accountRepository;
 
     @After
     public void cleanup () {
-        postsRepository.deleteAll();
+        accountRepository.deleteAll();
     }
 
     @Test
-    public void Dto데이터가_account테이블에_저장된다 () {
+    public void Dto데이터가_account테이블에_저장된다2 () {
         //given
-        PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
-                .author("kbi960130@bible.ac.kr")
-                .content("테스트")
-                .title("테스트 타이틀")
+        AccountSaveRequestDto dto = AccountSaveRequestDto.builder()
+                .userid("테스트 아이디")
+                .userpasswd("테스트 패스워드")
                 .build();
 
         //when
-        postsService.save(dto);
+        accountservice.save(dto);
 
         //then
-        Posts posts = postsRepository.findAll().get(0);
-        assertThat(posts.getAuthor()).isEqualTo(dto.getAuthor());
-        assertThat(posts.getContent()).isEqualTo(dto.getContent());
-        assertThat(posts.getTitle()).isEqualTo(dto.getTitle());
+        Account account= accountRepository.findAll().get(0);
+        assertThat(account.getUserid()).isEqualTo(dto.getUserid());
+        assertThat(account.getUserpasswd()).isEqualTo(dto.getUserpasswd());
 
     }
 
