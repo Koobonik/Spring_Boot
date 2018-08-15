@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AccountServiceTest {
 
     @Autowired
-    private AccountService accountservice;
+    private AccountService accountService;
 
     @Autowired
     private AccountRepository accountRepository;
@@ -28,7 +28,7 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void Dto데이터가_account테이블에_저장된다2 () {
+    public void Dto데이터가_account테이블에_저장된다 () {
         //given
         AccountSaveRequestDto dto = AccountSaveRequestDto.builder()
                 .userid("테스트 아이디")
@@ -36,7 +36,7 @@ public class AccountServiceTest {
                 .build();
 
         //when
-        accountservice.save(dto);
+        accountService.save(dto);
 
         //then
         Account account= accountRepository.findAll().get(0);
