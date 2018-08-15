@@ -29,15 +29,13 @@ public class Account extends BaseTimeEntity{
     @Column(columnDefinition = "TEXT", nullable = false)
     private String id;
     private String passwd;
-    private String email;
 
 
 
     // 해당 클래스의 빌더 패턴 클래스를 생성
     @Builder
-    public Account(String id, String passwd, String email){
+    public Account(String id, String passwd){
         this.id = id;
         this.passwd = passwd;
-        this.email = email;
     }
 }

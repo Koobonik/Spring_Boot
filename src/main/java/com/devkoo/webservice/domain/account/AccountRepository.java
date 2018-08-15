@@ -1,6 +1,6 @@
 package com.devkoo.webservice.domain.account;
 
-import com.devkoo.webservice.domain.posts.Posts;
+import com.devkoo.webservice.domain.account.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

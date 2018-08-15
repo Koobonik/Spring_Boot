@@ -2,6 +2,7 @@ package com.devkoo.webservice.account;
 
 import com.devkoo.webservice.domain.account.Account;
 import com.devkoo.webservice.domain.account.AccountRepository;
+import com.devkoo.webservice.domain.posts.Posts;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +31,7 @@ public class AccountRepositoryTest {
          이후 테스트 코드에 영향을 끼치지 않기 위해
          테스트 메소드가 끝날때 마다 respository 전체 비우는 코드
          **/
-        accountRepository.deleteAll();
+        //accountRepository.deleteAll();
     }
 
     @Test
@@ -39,7 +40,6 @@ public class AccountRepositoryTest {
         accountRepository.save(Account.builder()
             .id("테스트 아이디")
             .passwd("테스트 패스워드")
-            .email("테스트 이메일")
             .build());
 
         //when
@@ -49,6 +49,25 @@ public class AccountRepositoryTest {
         Account account = accountList.get(0);
         assertThat(account.getId(), is("테스트 아이디"));
         assertThat(account.getPasswd(), is("테스트 패스워드"));
-        assertThat(account.getEmail(), is("테스트 이메일"));
     }
+    @Test
+    public void BaseTimeEntity_등록2(){
+        // given
+        LocalDateTime now = LocalDateTime.now();
+        accountRepository.save(Account.builder()
+                .id("테스트 아이디")
+                .passwd("테스트 패스워드")
+                .build());
+
+        // when
+        List<Account> accountList = accountRepository.findAll();
+
+        // then
+        Account account = accountList.get(0);
+        //assertTrue(posts.getCreatedDate().isAfter(now));
+        assertTrue(account.getModifiedDate().isAfter(now));
+
+
+    }
+
 }
