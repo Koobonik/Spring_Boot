@@ -16,4 +16,27 @@ import javax.persistence.Id;
 @Entity // 테이블과 링크될 클래스 + 언더스코어 네이밍으로 이름 매칭 ex ) SalesManager -> sales_manager table
 
 public class Account extends BaseTimeEntity{
+    @Id // 해당 테이블의 PK 필드를 나타냄
+    @GeneratedValue // PK의 생성 규칙을 나타냄
+    //private  Long id;
+    // 테이블의 컬럼을 나타내면 굳이 선언하지 않더라도 해당 클래스의 필드는 모두 컬럼이 됨
+    // 사용하는 이유는 기본값 외에 추가로 변경이 필요한 옵션이 있을경우 사용함
+    // 문자열의 경우 VARCHAR(255)가 기본값인데, 사이즈를 500으로 늘리고 싶거나(ex: title), 타입을 TEXT로 변경하고 싶거나
+
+    @Column(length = 500, nullable = false)
+    private String id;
+
+    @Column(columnDefinition = "TEXT", nullable = false)
+    private String passwd;
+    private String email;
+
+
+
+    // 해당 클래스의 빌더 패턴 클래스를 생성
+    @Builder
+    public Account(String id, String passwd, String email){
+        this.id = id;
+        this.passwd = passwd;
+        this.email = email;
+    }
 }
