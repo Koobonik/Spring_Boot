@@ -31,7 +31,7 @@ public class AccountServiceTest {
     public void Dto데이터가_account테이블에_저장된다 () {
         //given
         AccountSaveRequestDto dto = AccountSaveRequestDto.builder()
-                .userid("테스트 아이디")
+                //.userid("테스트 아이디")
                 .userpasswd("테스트 패스워드")
                 .build();
 

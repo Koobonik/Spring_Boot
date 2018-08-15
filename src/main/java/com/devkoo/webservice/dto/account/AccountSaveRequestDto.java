@@ -17,11 +17,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AccountSaveRequestDto {
 
-    private String userid;
+    private Long userid;
     private String userpasswd;
 
     @Builder
-    public AccountSaveRequestDto(String userid, String userpasswd) {
+    public AccountSaveRequestDto(Long userid, String userpasswd) {
         this.userid = userid;
         this.userpasswd = userpasswd;
     }

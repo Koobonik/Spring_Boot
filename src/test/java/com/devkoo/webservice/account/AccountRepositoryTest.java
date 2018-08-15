@@ -36,7 +36,7 @@ public class AccountRepositoryTest {
     public void 아이디_불러오기(){
         //given
         accountRepository.save(Account.builder()
-            .userid("테스트 아이디")
+            //.userid("테스트 아이디")
             .userpasswd("테스트 패스워드")
             .build());
 
@@ -53,7 +53,7 @@ public class AccountRepositoryTest {
         // given
         LocalDateTime now = LocalDateTime.now();
         accountRepository.save(Account.builder()
-                .userid("테스트 아이디")
+                //.userid("테스트 아이디")
                 .userpasswd("테스트 패스워드")
                 .build());
 

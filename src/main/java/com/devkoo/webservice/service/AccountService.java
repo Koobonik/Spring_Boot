@@ -16,7 +16,7 @@ public class AccountService {
     private AccountRepository accountRepository;
 
     @Transactional
-    public String save(AccountSaveRequestDto dto){
+    public Long save(AccountSaveRequestDto dto){
         return accountRepository.save(dto.toEntity()).getUserid();
     }
 

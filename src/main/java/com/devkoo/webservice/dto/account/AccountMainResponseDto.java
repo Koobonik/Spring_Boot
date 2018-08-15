@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @Getter
 public class AccountMainResponseDto {
-    private String userid;
+    private Long userid;
     private String userpasswd;
     private String modifiedDate;
 
