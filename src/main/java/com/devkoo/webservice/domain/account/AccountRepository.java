@@ -7,6 +7,6 @@ import java.util.stream.Stream;
 public interface AccountRepository extends JpaRepository<Account, Long> {
     @Query("SELECT p " +
             "FROM Account p " +
-            "ORDER BY p.userid DESC")
+            "ORDER BY p.usernum DESC")
     Stream<Account> findAllDesc();
 }

@@ -37,7 +37,7 @@ public class AccountRepositoryTest {
         //given
         accountRepository.save(Account.builder()
             //.usernum("테스트 아이디")
-            .useraccount("테스트 유저 아이디")
+            //.useraccount("테스트 유저 아이디")
             .userpasswd("테스트 패스워드")
             .build());
 
