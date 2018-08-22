@@ -31,7 +31,7 @@ public class AccountServiceTest {
     public void Dto데이터가_account테이블에_저장된다 () {
         //given
         AccountSaveRequestDto dto = AccountSaveRequestDto.builder()
-                //.userid("테스트 아이디")
+                //.usernum("테스트 아이디")
                 //.useraccount("테스트 유저 아이디")
                 .userpasswd("테스트 패스워드")
                 .build();
@@ -41,7 +41,7 @@ public class AccountServiceTest {
 
         //then
         Account account= accountRepository.findAll().get(0);
-        //assertThat(account.getUserid()).isEqualTo(dto.getUserid());
+        //assertThat(account.getusernum()).isEqualTo(dto.getusernum());
         //assertThat(account.getUserpasswd()).isEqualTo(dto.getUseraccount());
         assertThat(account.getUserpasswd()).isEqualTo(dto.getUserpasswd());
 

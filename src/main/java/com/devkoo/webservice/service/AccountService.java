@@ -17,7 +17,7 @@ public class AccountService {
 
     @Transactional
     public Long save(AccountSaveRequestDto dto){
-        return accountRepository.save(dto.toEntity()).getUserid();
+        return accountRepository.save(dto.toEntity()).getUsernum();
     }
 
     // 트랜잭션 범위는 유지하되, 조회 기능만 남겨두어 조회 속도를 개선함

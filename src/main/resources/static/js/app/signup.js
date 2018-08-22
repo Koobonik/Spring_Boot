@@ -13,7 +13,7 @@ var signup = {
         };
 
         $.ajax({
-            type: 'ACCOUNT',
+            type: 'POST',
             url: '/posts',
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
