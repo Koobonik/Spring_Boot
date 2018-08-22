@@ -18,10 +18,18 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
         return "main";
     }
 
-    @GetMapping("test")
-    public String helloworld(Model model){
+    @GetMapping("signup")
+    public String signup(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "signup";
 
     }
+
+    @GetMapping("login")
+    public String login(Model model){
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "login";
+
+    }
+
 }
