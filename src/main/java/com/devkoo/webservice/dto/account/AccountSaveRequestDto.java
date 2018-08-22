@@ -19,20 +19,20 @@ public class AccountSaveRequestDto {
 
     private Long usernum;
     private String useraccount;
-    private String userpasswd;
+    private String userpassword;
 
     @Builder
-    public AccountSaveRequestDto(Long usernum, String useraccount, String userpasswd) {
+    public AccountSaveRequestDto(Long usernum, String useraccount, String userpassword) {
         this.usernum = usernum;
         this.useraccount = useraccount;
-        this.userpasswd = userpasswd;
+        this.userpassword = userpassword;
     }
 
     public Account toEntity(){
         return Account.builder()
                 .usernum(usernum)
                 .useraccount(useraccount)
-                .userpasswd(userpasswd)
+                .userpassword(userpassword)
                 .build();
     }
 }

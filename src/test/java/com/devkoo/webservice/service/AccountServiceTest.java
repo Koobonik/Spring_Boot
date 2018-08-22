@@ -33,7 +33,7 @@ public class AccountServiceTest {
         AccountSaveRequestDto dto = AccountSaveRequestDto.builder()
                 //.usernum("테스트 아이디")
                 //.useraccount("테스트 유저 아이디")
-                .userpasswd("테스트 패스워드")
+                .userpassword("테스트 패스워드")
                 .build();
 
         //when
@@ -42,8 +42,8 @@ public class AccountServiceTest {
         //then
         Account account= accountRepository.findAll().get(0);
         //assertThat(account.getusernum()).isEqualTo(dto.getusernum());
-        //assertThat(account.getUserpasswd()).isEqualTo(dto.getUseraccount());
-        assertThat(account.getUserpasswd()).isEqualTo(dto.getUserpasswd());
+        //assertThat(account.getuserpassword()).isEqualTo(dto.getUseraccount());
+        assertThat(account.getUserpassword()).isEqualTo(dto.getUserpassword());
 
     }
 

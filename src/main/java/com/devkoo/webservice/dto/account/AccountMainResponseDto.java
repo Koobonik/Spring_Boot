@@ -16,13 +16,13 @@ import java.util.Optional;
 public class AccountMainResponseDto {
     private Long usernum;
     private String useraccount;
-    private String userpasswd;
+    private String userpassword;
     private String modifiedDate;
 
     public AccountMainResponseDto(Account entity) {
         usernum = entity.getUsernum();
         //useraccount = entity.getUseraccount();
-        userpasswd = entity.getUserpasswd();
+        userpassword = entity.getUserpassword();
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }
 

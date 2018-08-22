@@ -38,7 +38,7 @@ public class AccountRepositoryTest {
         accountRepository.save(Account.builder()
             //.usernum("테스트 아이디")
             //.useraccount("테스트 유저 아이디")
-            .userpasswd("테스트 패스워드")
+            .userpassword("테스트 패스워드")
             .build());
 
         //when
@@ -48,7 +48,7 @@ public class AccountRepositoryTest {
         Account account = accountList.get(0);
         //assertThat(account.getusernum(), is("테스트 아이디"));
         //assertThat(account.getUseraccount(), is("테스트 유저 아이디"));
-        assertThat(account.getUserpasswd(), is("테스트 패스워드"));
+        assertThat(account.getUserpassword(), is("테스트 패스워드"));
     }
     @Test
     public void BaseTimeEntity_등록(){
@@ -57,7 +57,7 @@ public class AccountRepositoryTest {
         accountRepository.save(Account.builder()
                 //.usernum("테스트 아이디")
                 //.useraccount("테스트 유저 아이디")
-                .userpasswd("테스트 패스워드")
+                .userpassword("테스트 패스워드")
                 .build());
 
         // when
