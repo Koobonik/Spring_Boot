@@ -6,6 +6,7 @@ spring:
 # 공통영역(위)의 값은 각 profile 환경에 동일한 설정이 있으면 무시됨! 없다면 공통영역의 설정값이 사용됨
 # 그러므로 공통영역에 설정값을 넣는것에는 굉장한 주의가 필요함
 # 이때문에 datasource, table 등과 같은 옵션들은 공통영역에는 두지 않고 각 profile마다 별도로 두는것을 추천함
+
 spring:
   profiles: local
   datasource:
@@ -17,3 +18,5 @@ spring:
   h2:
     console:
       enabled: true
+server:
+  port: 80 
