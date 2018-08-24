@@ -22,14 +22,23 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
     public String signup(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "signup";
-
     }
 
     @GetMapping("login")
     public String login(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "login";
-
     }
 
+    @GetMapping("home")
+    public String home(Model model){
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "home";
+    }
+
+    @GetMapping("hi")
+    public String hi(Model model){
+        model.addAttribute("posts", postsService.findAllDesc());
+        return "hi";
+    }
 }
