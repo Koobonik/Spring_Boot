@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>PWMW</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,6 +11,11 @@
 </head>
 <body>
 <br>
+
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 <div>
     <button onclick="location.href='signup'" style="align-content: right" type="button" class="btn btn-primary">회원 가입</button>
     <button onclick="location.href='login'" margin-right="15px" type="button" class="btn btn-primary">로그인</button>

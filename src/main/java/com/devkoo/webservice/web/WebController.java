@@ -4,7 +4,8 @@ import com.devkoo.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @AllArgsConstructor
@@ -12,31 +13,31 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
 
     private PostsService postsService;
 
-    @GetMapping("/")
+    @RequestMapping(value="/", method = {RequestMethod.GET, RequestMethod.POST})
     public String main(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
         return "main";
     }
 
-    @GetMapping("signup")
+    @RequestMapping(value="signup", method = {RequestMethod.GET, RequestMethod.POST})
     public String signup(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "signup";
     }
 
-    @GetMapping("login")
+    @RequestMapping(value="login", method = {RequestMethod.GET, RequestMethod.POST})
     public String login(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "login";
     }
 
-    @GetMapping("home")
+    @RequestMapping(value="home", method = {RequestMethod.GET, RequestMethod.POST})
     public String home(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "home";
     }
 
-    @GetMapping("hi")
+    @RequestMapping(value="hi", method = {RequestMethod.GET, RequestMethod.POST})
     public String hi(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "hi";
