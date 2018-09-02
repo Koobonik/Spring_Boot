@@ -6,12 +6,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
-/**
- * Created by jojoldu@gmail.com on 2018. 1. 4.
- * Blog : http://jojoldu.tistory.com
- * Github : https://github.com/jojoldu
- */
-
 @Getter
 public class AccountMainResponseDto {
     private Long usernum;
