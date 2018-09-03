@@ -6,6 +6,28 @@
     <title>Title</title>
 </head>
 <body>
-test page
+<!-- 목록 출력 영역 -->
+<table class="table table-horizontal table-bordered">
+    <thead class="thead-strong">
+    <tr>
+        <th>게시글번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>최종수정일</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+
+    <!-- each posts 는 리스트를 순회하여 하나씩 꺼내어 각각의 필드값에 채워서 테이블에 출력시킴 -->
+    {{#each account}}
+        <tr>
+            <td>{{usernum}}</td>
+            <td>{{userpassword}}</td>
+            <td>{{userid}}</td>
+            <td>{{modifiedDate}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
 </body>
 </html>
