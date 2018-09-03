@@ -8,7 +8,7 @@ var signup = {
     save : function () {
         var data = {
             userid: $('#userid').val(),
-            userpasswd: $('#userpasswd').val(),
+            userpasswd: $('#userpassword').val(),
             useremail: $('#useremail').val()
         };
 
