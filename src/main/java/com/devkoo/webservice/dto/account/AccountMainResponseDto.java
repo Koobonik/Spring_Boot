@@ -9,13 +9,13 @@ import java.util.Optional;
 @Getter
 public class AccountMainResponseDto {
     private Long usernum;
-    private String useraccount;
+    private String userid;
     private String userpassword;
     private String modifiedDate;
 
     public AccountMainResponseDto(Account entity) {
         usernum = entity.getUsernum();
-        //useraccount = entity.getUseraccount();
+        userid = entity.getUserid();
         userpassword = entity.getUserpassword();
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }

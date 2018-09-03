@@ -37,7 +37,7 @@ public class AccountRepositoryTest {
         //given
         accountRepository.save(Account.builder()
             //.usernum("테스트 아이디")
-            //.useraccount("테스트 유저 아이디")
+            .userid("테스트 유저 아이디")
             .userpassword("테스트 패스워드")
             .build());
 
@@ -47,7 +47,7 @@ public class AccountRepositoryTest {
         //then
         Account account = accountList.get(0);
         //assertThat(account.getusernum(), is("테스트 아이디"));
-        //assertThat(account.getUseraccount(), is("테스트 유저 아이디"));
+        //assertThat(account.getuserid(), is("테스트 유저 아이디"));
         assertThat(account.getUserpassword(), is("테스트 패스워드"));
     }
     @Test
@@ -56,7 +56,7 @@ public class AccountRepositoryTest {
         LocalDateTime now = LocalDateTime.now();
         accountRepository.save(Account.builder()
                 //.usernum("테스트 아이디")
-                //.useraccount("테스트 유저 아이디")
+                .userid("테스트 유저 아이디")
                 .userpassword("테스트 패스워드")
                 .build());
 

@@ -13,20 +13,20 @@ import lombok.Setter;
 public class AccountSaveRequestDto {
 
     private Long usernum;
-    private String useraccount;
+    private String userid;
     private String userpassword;
 
     @Builder
-    public AccountSaveRequestDto(Long usernum, String useraccount, String userpassword) {
+    public AccountSaveRequestDto(Long usernum, String userid, String userpassword) {
         this.usernum = usernum;
-        this.useraccount = useraccount;
+        this.userid = userid;
         this.userpassword = userpassword;
     }
 
     public Account toEntity(){
         return Account.builder()
                 .usernum(usernum)
-                .useraccount(useraccount)
+                .userid(userid)
                 .userpassword(userpassword)
                 .build();
     }
