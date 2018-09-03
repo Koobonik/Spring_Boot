@@ -22,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 public class AccountRepositoryTest {
     @Autowired
     AccountRepository accountRepository;
-
+    long a = 23;
     @After
     public void cleanup(){
         /**
@@ -36,8 +36,9 @@ public class AccountRepositoryTest {
     public void 아이디_불러오기(){
         //given
         accountRepository.save(Account.builder()
-            //.usernum("테스트 아이디")
+            .usernum(a)
             .userid("테스트 유저 아이디")
+            .useremail("유저 이메일")
             .userpassword("테스트 패스워드")
             .build());
 
@@ -46,8 +47,8 @@ public class AccountRepositoryTest {
 
         //then
         Account account = accountList.get(0);
-        //assertThat(account.getusernum(), is("테스트 아이디"));
-        //assertThat(account.getuserid(), is("테스트 유저 아이디"));
+        assertThat(account.getUsernum(), is(a));
+        assertThat(account.getUserid(), is("테스트 유저 아이디"));
         assertThat(account.getUserpassword(), is("테스트 패스워드"));
     }
     @Test
@@ -55,8 +56,9 @@ public class AccountRepositoryTest {
         // given
         LocalDateTime now = LocalDateTime.now();
         accountRepository.save(Account.builder()
-                //.usernum("테스트 아이디")
+                .usernum(a)
                 .userid("테스트 유저 아이디")
+                .useremail("유저 이메일")
                 .userpassword("테스트 패스워드")
                 .build());
 

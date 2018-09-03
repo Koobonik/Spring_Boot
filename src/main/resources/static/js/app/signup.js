@@ -8,13 +8,13 @@ var signup = {
     save : function () {
         var data = {
             userid: $('#userid').val(),
-            userpasswd: $('#userpassword').val(),
+            userpassword: $('#userpassword').val(),
             useremail: $('#useremail').val()
         };
 
         $.ajax({
             type: 'POST',
-            url: '/posts',
+            url: '/account',
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)

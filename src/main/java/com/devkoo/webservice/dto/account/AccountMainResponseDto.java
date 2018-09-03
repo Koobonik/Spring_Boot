@@ -11,12 +11,14 @@ public class AccountMainResponseDto {
     private Long usernum;
     private String userid;
     private String userpassword;
+    private String useremail;
     private String modifiedDate;
 
     public AccountMainResponseDto(Account entity) {
         usernum = entity.getUsernum();
         userid = entity.getUserid();
         userpassword = entity.getUserpassword();
+        useremail = entity.getUseremail();
         modifiedDate = toStringDateTime(entity.getModifiedDate());
     }
 

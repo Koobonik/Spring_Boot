@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class AccountServiceTest {
-
+    long a = 23;
     @Autowired
     private AccountService accountService;
 
@@ -31,8 +31,9 @@ public class AccountServiceTest {
     public void Dto데이터가_account테이블에_저장된다 () {
         //given
         AccountSaveRequestDto dto = AccountSaveRequestDto.builder()
-                //.usernum("테스트 아이디")
+                .usernum(a)
                 .userid("테스트 유저 아이디")
+                .useremail("유저 이메일")
                 .userpassword("테스트 패스워드")
                 .build();
 
