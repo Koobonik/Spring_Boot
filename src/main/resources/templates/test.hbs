@@ -4,30 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--부트스트랩 css 추가-->
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
 </head>
 <body>
-<!-- 목록 출력 영역 -->
-<table class="table table-horizontal table-bordered">
-    <thead class="thead-strong">
-    <tr>
-        <th>게시글번호</th>
-        <th>제목</th>
-        <th>작성자</th>
-        <th>최종수정일</th>
-    </tr>
-    </thead>
-    <tbody id="tbody">
 
-    <!-- each posts 는 리스트를 순회하여 하나씩 꺼내어 각각의 필드값에 채워서 테이블에 출력시킴 -->
-    {{#each account}}
+<div class="col-md-12">
+    <br/>
+    <br/>
+    <!-- 목록 출력 영역 -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
         <tr>
-            <td>{{usernum}}</td>
-            <td>{{userpassword}}</td>
-            <td>{{userid}}</td>
-            <td>{{modifiedDate}}</td>
+            <th>유저수</th>
+            <th>유저 비밀번호</th>
+            <th>유저 아이디</th>
+            <th>최종수정일</th>
         </tr>
-    {{/each}}
-    </tbody>
-</table>
+        </thead>
+        <tbody id="tbody">
+
+        <!-- each posts 는 리스트를 순회하여 하나씩 꺼내어 각각의 필드값에 채워서 테이블에 출력시킴 -->
+        {{#each account}}
+            <tr>
+                <td>{{usernum}}</td>
+                <td>{{userpassword}}</td>
+                <td>{{userid}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
