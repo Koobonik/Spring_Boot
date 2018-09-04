@@ -9,7 +9,6 @@ var signup = {
         var data = {
             userid: $('#userid').val(),
             userpassword: $('#userpassword').val(),
-            usernum: $('#usernum').val(),
             useremail: $('#useremail').val()
         };
 
