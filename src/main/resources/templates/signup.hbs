@@ -25,12 +25,14 @@
         </div>
         <div class="form-group">
             <label for="author"> 비밀번호 </label>
-            <input type="password" class="form-control" id="userpassword" placeholder="Password"><!-- 비밀번호  2번 확인-->
+            <input type="password" class="form-control" id="userpassword" onchange="check()" placeholder="Password"><!-- 비밀번호  2번 확인-->
         </div>
         <div class="form-group">
             <label for="author"> 비밀번호 확인 </label>
-            <input type="number" class="form-control" id="userpassword2" placeholder="Password Check"><!-- 비밀번호  2번 확인-->
+            <input type="password" class="form-control" id="userpassword2" onchange="check()" placeholder="Password Check"><!-- 비밀번호  2번 확인-->
         </div>
+
+
         <div class="form-group">
             <label for="content"> 이메일 </label>
             <input type="email" class="form-control" id="useremail" placeholder="abcd1234@exam.com">
@@ -45,6 +47,6 @@
 
 <!--custom js 추가-->
 <script src="/js/app/signup.js"></script>
-
+<script src="/js/app/passwordcheck.js"></script>
 </body>
 </html>
