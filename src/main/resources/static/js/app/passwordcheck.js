@@ -3,10 +3,10 @@ function check() {
     var pw2 = document.getElementById("userpassword2").value; // 변수의 크기 측정을 위해 사용될 변수
 
     // 비밀번호의 크기는 12글자 이상 25글자 이하면 가능! 조금 줄일까 생각중
-    if ( (pw.length < 12 || pw.length >= 25) && (pw2.length < 12 || pw2.length >= 25) ) {
-        window.alert("비밀번호는 12글자 이상, 25글자 이하만 이용 가능 합니다.");
+    if ( (pw.length < 8 || pw.length >= 20) && (pw2.length < 8 || pw2.length >= 20) ) {
+        window.alert("비밀번호는 12글자 이상, 20글자 이하만 이용 가능 합니다.");
         document.getElementById("userpassword").value = document.getElementById("userpassword2").value = "";
-        document.getElementById("same").innerHTML = "12글자 이상 25글자 이하로 입력해주세요.";
+        document.getElementById("same").innerHTML = "8글자 이상 25글자 이하로 입력해주세요.";
         document.getElementById("same").style.color="red";
     }
 
