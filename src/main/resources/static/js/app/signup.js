@@ -13,8 +13,8 @@ var signup = {
         };
 
         $.ajax({
-            type: 'POST',
-            url: '/account',
+            type: 'POST', // type은 변함 없음
+            url: '/account', // 이게 중요함
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)

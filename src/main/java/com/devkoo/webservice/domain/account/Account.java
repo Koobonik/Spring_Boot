@@ -26,6 +26,7 @@ public class Account extends BaseTimeEntity{
     //@Column(length = 50, nullable = false)
     //private String id;
 
+    // 아이디 이메일 패스워드
     @Column(columnDefinition = "TEXT", nullable = false)
     private String userid;
     private String useremail;
