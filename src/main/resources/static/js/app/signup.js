@@ -21,6 +21,7 @@ var signup = {
         }).done(function() {
             alert('회원가입이 완료되었습니다.');
             location.reload();
+            location.href="/";
         }).fail(function (error) {
             alert(error);
         });
