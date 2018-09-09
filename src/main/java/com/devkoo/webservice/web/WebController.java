@@ -32,18 +32,6 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
         return "login";
     }
 
-    @RequestMapping(value="home", method = {RequestMethod.GET, RequestMethod.POST})
-    public String home(Model model){
-        model.addAttribute("posts", postsService.findAllDesc());
-        return "home";
-    }
-
-    @RequestMapping(value="hi", method = {RequestMethod.GET, RequestMethod.POST})
-    public String hi(Model model){
-        model.addAttribute("posts", postsService.findAllDesc());
-        return "hi";
-    }
-
     @RequestMapping(value="test", method = {RequestMethod.GET, RequestMethod.POST})
     public String test(Model model){
         model.addAttribute("account", accountService.findAllDesc());
