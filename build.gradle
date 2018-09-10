@@ -47,4 +47,7 @@ dependencies {
 
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
+
+    //mariadb 추가
+    compile("org.mariadb.jdbc:mariadb-java-client")
 }
