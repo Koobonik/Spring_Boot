@@ -41,7 +41,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     runtime('com.h2database:h2')
     compileOnly('org.projectlombok:lombok')
-    compile 'mysql:mysql-connector-java'
     testCompile('org.springframework.boot:spring-boot-starter-test')
     compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.2.15'
 
