@@ -15,6 +15,7 @@ import javax.persistence.Id;
 @Getter // 클래스내 모든 필드의 Getter 메소드를 자동생성
 @Entity // 테이블과 링크될 클래스 + 언더스코어 네이밍으로 이름 매칭 ex ) SalesManager -> sales_manager table
 
+// 데이터 베이스를 만드는 jpa 기능임
 public class Account extends BaseTimeEntity{
     @Id // 해당 테이블의 PK 필드를 나타냄
     @GeneratedValue // PK의 생성 규칙을 나타냄
