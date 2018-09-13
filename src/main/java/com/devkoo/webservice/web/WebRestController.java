@@ -6,10 +6,13 @@ import com.devkoo.webservice.dto.posts.PostsSaveRequestDto;
 import com.devkoo.webservice.service.AccountService;
 import com.devkoo.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
 
 @RestController
 @AllArgsConstructor
@@ -17,6 +20,7 @@ public class WebRestController {
     private PostsRepository postsRepository;
     private PostsService postsService;
     private AccountService accountService;
+    private Environment env;
 
     @GetMapping("/hello") // 웹에서 /hello 라는 요청이 있을경우
     public String hello() {
@@ -37,5 +41,13 @@ public class WebRestController {
     public Long saveAccount(@RequestBody AccountSaveRequestDto dto) {
         return accountService.save(dto);
     }
+
+    @GetMapping("/profile")
+    public String getProfile () {
+        return Arrays.stream(env.getActiveProfiles())
+                .findFirst()
+                .orElse("");
+    }
+
 }
 
