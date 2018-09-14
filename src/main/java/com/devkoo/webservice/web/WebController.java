@@ -14,24 +14,29 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
 
     private PostsService postsService;
     private AccountService accountService;
+
+    // 메인뷰
     @RequestMapping(value="/", method = {RequestMethod.GET, RequestMethod.POST})
     public String main(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
         return "main";
     }
 
+    // 회원가입 페이지
     @RequestMapping(value="signup", method = {RequestMethod.GET, RequestMethod.POST})
     public String signup(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "signup";
     }
 
+    // 로그인 페이지
     @RequestMapping(value="login", method = {RequestMethod.GET, RequestMethod.POST})
     public String login(Model model){
         model.addAttribute("posts", postsService.findAllDesc());
         return "login";
     }
 
+    // 테스트 페이지 : 회원 목록 조회
     @RequestMapping(value="test", method = {RequestMethod.GET, RequestMethod.POST})
     public String test(Model model){
         model.addAttribute("account", accountService.findAllDesc());
