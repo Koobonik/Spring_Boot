@@ -22,11 +22,6 @@ public class WebRestController {
     private AccountService accountService;
     private Environment env;
 
-    @GetMapping("/hello") // 웹에서 /hello 라는 요청이 있을경우
-    public String hello() {
-        return "HelloWorld hello";
-    } // HelloWorld 라는 문구 반환
-
     @GetMapping("/welcome")
     public String welcome() {
         return "Welcome to Spring Boot";

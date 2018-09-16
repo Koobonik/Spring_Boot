@@ -5,6 +5,7 @@ import com.devkoo.webservice.service.PostsService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,6 +23,10 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
         return "main";
     }
 
+    @GetMapping("/hello") // 웹에서 /hello 라는 요청이 있을경우
+    public String hello() {
+        return "hello";
+    }
     // 회원가입 페이지
     @RequestMapping(value="signup", method = {RequestMethod.GET, RequestMethod.POST})
     public String signup(Model model){
