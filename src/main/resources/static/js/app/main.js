@@ -1,4 +1,4 @@
-var main = {
+var main = { // main 이라는 객체를 만드는 것임.
     init : function () {
         var _this = this;
         $('#btn-save').on('click', function () {
