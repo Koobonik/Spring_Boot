@@ -23,7 +23,7 @@ public class Posts extends BaseTimeEntity {
     // 사용하는 이유는 기본값 외에 추가로 변경이 필요한 옵션이 있을경우 사용함
     // 문자열의 경우 VARCHAR(255)가 기본값인데, 사이즈를 500으로 늘리고 싶거나(ex: title), 타입을 TEXT로 변경하고 싶거나
 
-    @Column(length = 500, nullable = false)
+    @Column(length = 1000, nullable = false)
     private String title;
 
     @Column(columnDefinition = "TEXT", nullable = false)
