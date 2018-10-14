@@ -17,6 +17,7 @@ public class WebController { // 웹컨트롤러로써 GetMapping 이용해서 �
     private AccountService accountService;
 
     // 메인뷰
+    // findAllDesc 는 위에서부터 보여줄 것임
     @RequestMapping(value="/", method = {RequestMethod.GET, RequestMethod.POST})
     public String main(Model model) {
         model.addAttribute("posts", postsService.findAllDesc());
