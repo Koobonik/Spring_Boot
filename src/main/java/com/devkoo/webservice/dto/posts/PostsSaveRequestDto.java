@@ -16,13 +16,14 @@ public class PostsSaveRequestDto {
     private String content;
     private String author;
 
+    // db 설계
     @Builder
     public PostsSaveRequestDto(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
     }
-
+    // 객체 생성
     public Posts toEntity(){
         return Posts.builder()
                 .title(title)
