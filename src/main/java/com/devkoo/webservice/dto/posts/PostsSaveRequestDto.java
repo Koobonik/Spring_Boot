@@ -23,7 +23,7 @@ public class PostsSaveRequestDto {
         this.content = content;
         this.author = author;
     }
-    // 객체 생성 및 엔티티
+    // 객체 생성 및 엔티티 빌드
     public Posts toEntity(){
         return Posts.builder()
                 .title(title)
