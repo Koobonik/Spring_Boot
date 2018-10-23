@@ -28,7 +28,7 @@ public class Account extends BaseTimeEntity{
     //private String id;
 
     // 아이디 이메일 패스워드
-    // 이값들이 비어있으면 회원가입 안됨.
+    // 이값들이 null 이면 회원가입 안됨.
     @Column(columnDefinition = "TEXT", nullable = false)
     private String userid;
     private String useremail;
